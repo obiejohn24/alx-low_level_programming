@@ -1,14 +1,17 @@
-#include "main.h"
- /** 
-  * swap_int - swap variable values 
-  * @a: pointer 1 
-  * @b: pointer 2 
-  * Return: void 
-  */ 
-  
- void swap_int(int *a, int *b) 
- {
- *a += *b; 
- *b = *a - *b; 
- *a = *a - *b; 
- }
+#include "main.h"
+
+/**
+ * swap_int -  swap numbers a and b
+ * @a : number a
+ * @b : number b
+ * Return: void
+ * On error, 0 is returned, and errno is set appropriately.
+ */
+void swap_int(int *a, int *b)
+{
+	int z;
+
+	z = *b;
+	*b = *a;
+	*a = z;
+}
